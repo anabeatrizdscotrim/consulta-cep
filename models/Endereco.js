@@ -1,5 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../database/connection'); /**/ 
+const sequelize = require('../database/connection');  
 
 class Endereco extends Model {
   static init(sequelize) {
@@ -41,7 +41,7 @@ class Endereco extends Model {
         allowNull: false,
       },
     }, {
-      sequelize, // A instância do Sequelize é passada aqui
+      sequelize, 
       modelName: 'Endereco',
       tableName: 'enderecos',
       timestamps: true,
