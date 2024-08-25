@@ -1,19 +1,23 @@
 const express = require('express');
-const axios = require('axios');
-//const { default: axios } = require('axios');
+const rotas = require('./routes');
 
 const app = express();
-const port = 3000;
 
+app.use(express.json());
+app.use('/api', rotas);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor rodando na porta ${PORT}`));
+
+/*
 app.get('/', (req, res) => {
     res.send('Hello world');
 });
 
-/*
 app.get('/novarota', (req,res) => {
     res.send('Nova rota criada');
 })
-*/
+
 
 app.get('/consulta-cep/:cep' ,  async (req,res) => {
     const cep = req.params.cep; //obtendo o CEP da URL
@@ -36,3 +40,5 @@ app.get('/consulta-cep/:cep' ,  async (req,res) => {
 app.listen(port, () => {
     console.log(`Servidor rodando em http://localhost:${port}`);
 });
+
+*/
