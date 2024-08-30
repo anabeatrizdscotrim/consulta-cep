@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "seu_usuario",
-    "password": "sua_senha",
-    "database": "database_development",
+    "username": "postgres",
+    "password": "2460",
+    "database": "apinode",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "seu_usuario",
-    "password": "sua_senha",
+    "username": "postgres",
+    "password": "2460",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "seu_usuario",
-    "password": "sua_senha",
+    "username": "postgres",
+    "password": "2460",
     "database": "database_production",
     "host": "127.0.0.1",
     "dialect": "postgres"
